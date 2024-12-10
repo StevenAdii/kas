@@ -1,0 +1,275 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* Base styles */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Background gradient */
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #fce7f3, #ede9fe, #eff6ff);
+}
+
+/* Container padding */
+.p-6 {
+  padding: 1.5rem;
+}
+
+/* Max width container */
+.max-w-6xl {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Spacing utilities */
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+/* Header styles */
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--gradient-from), var(--gradient-to));
+}
+
+.from-pink-400.to-purple-400 {
+  --gradient-from: #f472b6;
+  --gradient-to: #c084fc;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.transform {
+  transform: translateZ(0);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.transition-transform {
+  transition-property: transform;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+/* Card headers */
+.from-pink-100.to-pink-50 {
+  --gradient-from: #fce7f3;
+  --gradient-to: #fdf2f8;
+}
+
+.from-green-100.to-green-50 {
+  --gradient-from: #dcfce7;
+  --gradient-to: #f0fdf4;
+}
+
+.from-red-100.to-red-50 {
+  --gradient-from: #fee2e2;
+  --gradient-to: #fef2f2;
+}
+
+/* Form styles */
+.form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+/* Button styles */
+.button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-image: linear-gradient(to right, #c084fc, #60a5fa);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: opacity 200ms;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Transaction list styles */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c084fc #f3f4f6;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #c084fc;
+  border-radius: 3px;
+}
+
+/* Transaction item styles */
+.transaction-item {
+  padding: 1rem;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.5rem;
+  transition: box-shadow 200ms;
+}
+
+.transaction-item:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive grid */
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Grid gap */
+.gap-6 {
+  gap: 1.5rem;
+}
+
+/* Text colors */
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-pink-900 {
+  color: #831843;
+}
+
+.text-green-600 {
+  color: #16a34a;
+}
+
+.text-red-600 {
+  color: #dc2626;
+}
+
+/* Icon colors */
+.text-pink-500 {
+  color: #ec4899;
+}
+
+.text-green-500 {
+  color: #22c55e;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+/* Search input styles */
+.search-input {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
